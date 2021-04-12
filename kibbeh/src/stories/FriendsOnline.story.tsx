@@ -4,12 +4,12 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import { FollowersOnline, FriendsOnlineProps } from "../ui/FollowersOnline";
+import { FollowerOnline, FriendsOnlineProps } from "../ui/FollowersOnline";
 import avatar from "../img/avatar.png";
 
 export default {
   title: "FriendsOnline",
-  component: FollowersOnline,
+  component: FollowerOnline,
 };
 
 const user = {
@@ -24,7 +24,7 @@ const user = {
 const onlineFriendList = [user, user, user, user, user];
 
 export const Main: Story<FriendsOnlineProps> = ({ ...props }) => (
-  <FollowersOnline
+  <FollowerOnline
     {...props}
     onlineFriendCount={23}
     onlineFriendList={onlineFriendList}
@@ -34,7 +34,7 @@ export const Main: Story<FriendsOnlineProps> = ({ ...props }) => (
 Main.bind({});
 
 export const ZeroFriends: Story<FriendsOnlineProps> = ({ ...props }) => (
-  <FollowersOnline {...props} />
+  <FollowerOnline {...props} />
 );
 
 ZeroFriends.bind({});
